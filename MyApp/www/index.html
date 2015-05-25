@@ -22,9 +22,9 @@
 			var myswitch = $(this);
 			var show     = myswitch[0].selectedIndex == 1 ? true:false;
 			if(show){
-			  link = "/remote/remote.php?device=1&command=1";
+			  link = "http://192.168.2.110/remote/remote.php?device=1&command=1";
 			}else{
-			   link = "/remote/remote.php?device=1&command=0";
+			   link = "http://192.168.2.110/remote/remote.php?device=1&command=0";
 			}
 			
 			$.get(link, function(data) {
@@ -37,9 +37,9 @@
 			var myswitch = $(this);
 			var show     = myswitch[0].selectedIndex == 1 ? true:false;
 			if(show){
-			  link = "/remote/remote.php?device=3&command=1";
+			  link = "http://192.168.2.110/remote/remote.php?device=3&command=1";
 			}else{
-			   link = "/remote/remote.php?device=3&command=0";
+			   link = "http://192.168.2.110/remote/remote.php?device=3&command=0";
 			}
 			
 			$.get(link, function(data) {
@@ -52,9 +52,9 @@
 			var myswitch = $(this);
 			var show     = myswitch[0].selectedIndex == 1 ? true:false;
 			if(show){
-			  link = "/remote/remote.php?device=4&command=1";
+			  link = "http://192.168.2.110/remote/remote.php?device=4&command=1";
 			}else{
-			   link = "/remote/remote.php?device=4&command=0";
+			   link = "http://192.168.2.110/remote/remote.php?device=4&command=0";
 			}
 			
 			$.get(link, function(data) {
@@ -67,9 +67,9 @@
 			var myswitch = $(this);
 			var show     = myswitch[0].selectedIndex == 1 ? true:false;
 			if(show){
-			  link = "/remote/remote.php?device=2&command=1";
+			  link = "http://192.168.2.110/remote/remote.php?device=2&command=1";
 			}else{
-			   link = "/remote/remote.php?device=2&command=0";
+			   link = "http://192.168.2.110/remote/remote.php?device=2&command=0";
 			}
 			
 			$.get(link, function(data) {
@@ -82,9 +82,9 @@
 			var myswitch = $(this);
 			var show     = myswitch[0].selectedIndex == 1 ? true:false;
 			if(show){
-			  link = "/remote/remote.php?device=5&command=1";
+			  link = "http://192.168.2.110/remote/remote.php?device=5&command=1";
 			}else{
-			   link = "/remote/remote.php?device=5&command=0";
+			   link = "http://192.168.2.110/remote/remote.php?device=5&command=0";
 			}
 			
 			$.get(link, function(data) {
@@ -95,7 +95,7 @@
 		
 		
 		$('#rec_pad td').click(function(e){
-		var link = "/remote/remote.php?remote=SKY&key=";
+		var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=";
 		link += $(this).attr("id");
 	
 		$.get(link, function(data) {
@@ -117,7 +117,7 @@
 	  favs["KEY_ZDFHD"] = "KEY_1~KEY_6~KEY_2";
 	  favs["KEY_RTL"] = "KEY_3";
 	  if(typeof favs[id] != "undefined"){
-	  var link = "/remote/remote.php?channel=";
+	  var link = "http://192.168.2.110/remote/remote.php?channel=";
 		link += favs[id];
 	
 		$.get(link, function(data) {
@@ -126,7 +126,7 @@
 	   return;
 	  }
 	
-		var link = "/remote/remote.php?remote=SKY&key=";
+		var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=";
 		link += $(this).attr("id");
 	
 		$.get(link, function(data) {
@@ -135,14 +135,14 @@
   });
   
    $('#KEY_PIN').click(function(e){ 
-		var link = "/remote/remote.php?channel=KEY_5~KEY_8~KEY_5~KEY_4";
+		var link = "http://192.168.2.110/remote/remote.php?channel=KEY_5~KEY_8~KEY_5~KEY_4";
 		$.get(link, function(data) {
 
 });
  });
   
    $('#tv_menu li').click(function(e){
-		var link = "/remote/remote.php?remote=TV&key=";
+		var link = "http://192.168.2.110/remote/remote.php?remote=TV&key=";
 		link += $(this).attr("id");
 	
 		$.get(link, function(data) {
@@ -151,34 +151,34 @@
   });
   
   $(".tv").swiperight(function() {
-    var link = "/remote/remote.php?remote=TV&key=KEY_VOLUMEUP";
+    var link = "http://192.168.2.110/remote/remote.php?remote=TV&key=KEY_VOLUMEUP";
 		$.get(link, function(data) {
 
 });
 });
 
 $(".tv").swipeleft(function() {
-    var link = "/remote/remote.php?remote=TV&key=KEY_VOLUMEDOWN";
+    var link = "http://192.168.2.110/remote/remote.php?remote=TV&key=KEY_VOLUMEDOWN";
 		$.get(link, function(data) {
 
 });
 });
   
   $(".rec_pad").swiperight(function() {
-    var link = "/remote/remote.php?remote=SKY&key=KEY_NEXT";
+    var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_NEXT";
 		$.get(link, function(data) {
 
 });
 });
 $(".rec_pad").swipeleft(function() {
-    var link = "/remote/remote.php?remote=SKY&key=KEY_LAST";
+    var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_LAST";
 		$.get(link, function(data) {
 
 });
 });
 
 $("#guide_swipe").swipeleft(function() {
-   var link = "/remote/remote.php?remote=SKY&key=KEY_LEFT";
+   var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_LEFT";
 		$.get(link, function(data) {
 
 });
@@ -186,7 +186,7 @@ $("#guide_swipe").swipeleft(function() {
 });
 
 $("#guide_swipe").swiperight(function() {
-      var link = "/remote/remote.php?remote=SKY&key=KEY_RIGHT";
+      var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_RIGHT";
 		$.get(link, function(data) {
 
 });
@@ -197,13 +197,13 @@ $("#guide_swipe").swiperight(function() {
 				{				
 					tapToClick: true,
 					wipeUp: function(result) {
-						var link = "/remote/remote.php?remote=SKY&key=KEY_UP";
+						var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_UP";
 						$.get(link, function(data) {
 
 						});
 					},
 					wipeDown: function(result) {
-						var link = "/remote/remote.php?remote=SKY&key=KEY_DOWN";
+						var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_DOWN";
 						$.get(link, function(data) {
 	
 						});
@@ -211,7 +211,7 @@ $("#guide_swipe").swiperight(function() {
 				});
 				
 				$("#guide_swipe").click(function() { 
-					var link = "/remote/remote.php?remote=SKY&key=KEY_OK";
+					var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_OK";
 					$.get(link, function(data) {
 	
 					});
@@ -221,7 +221,7 @@ $("#guide_swipe").swiperight(function() {
   });
   
   function sleep(){
-    var link = "/remote/remote.php?sleep=1";
+    var link = "http://192.168.2.110/remote/remote.php?sleep=1";
 	
 	$.get(link, function(data) {
       
@@ -230,7 +230,7 @@ $("#guide_swipe").swiperight(function() {
   
   function setTimer(device, field){
     var min = document.getElementById(field).value;
-	var link = "/remote/setTimer.php?device=" + device + "&min=" + min;
+	var link = "http://192.168.2.110/remote/setTimer.php?device=" + device + "&min=" + min;
 	
 	$.get(link, function(data) {
       
