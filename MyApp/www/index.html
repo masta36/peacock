@@ -193,6 +193,23 @@ $("#guide_swipe").swiperight(function() {
 
 });
 
+
+$("#any_swipe").swipeleft(function() {
+   var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_BACKS";
+		$.get(link, function(data) {
+
+});
+
+});
+
+$("#any_swipe").swiperight(function() {
+      var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_FORWS";
+		$.get(link, function(data) {
+
+});
+
+});
+
 	$("#guide_swipe").wipetouch(
 				{				
 					tapToClick: true,
@@ -210,8 +227,16 @@ $("#guide_swipe").swiperight(function() {
 					}
 				});
 				
+				
 				$("#guide_swipe").click(function() { 
 					var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_OK";
+					$.get(link, function(data) {
+	
+					});
+				
+				});
+				$("#any_swipe").click(function() { 
+					var link = "http://192.168.2.110/remote/remote.php?remote=SKY&key=KEY_PLAY";
 					$.get(link, function(data) {
 	
 					});
@@ -352,6 +377,46 @@ $("#guide_swipe").swiperight(function() {
 		
 	</div>
 	
+		<div data-role="page" id="ANY">
+		<header data-role="header">
+		<h1>Archiv / Anytime</h1>
+		</header>
+		
+		<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+		<br><br>
+		<div>
+			   <table id="rec_pad" align="center" width="70%" height="60%" >
+			   
+			     <tr height="60px"><td id="KEY_REC" bgcolor="#bbbbbb"  width="25%" align="center" valign="Center" height="50"><b>REC</b></td>
+			   <td width="25%" id="KEY_ARCHIV" bgcolor="#bbbbbb" align="center" valign="Center" height="50"><b>ARCHIV</b></td>
+			   <td width="25%" id="KEY_STOP" bgcolor="#bbbbbb"   align="center" valign="Center" height="50"><b>STOP</b></td>
+			   <td width="25%" id="KEY_BACK" bgcolor="#bbbbbb"   align="center" valign="Center" height="50"><b>BACK</b></td></tr>
+			   </table>
+			   </div>
+			   <div id=guide_swipe width="100%" height="100%">
+			   <table width="100%" height="300">
+			   <tr><td bgcolor="#bbbbbb"></td></tr>
+			   </table>
+			   </div>
+			   <div>
+			    <br><br>
+			   <table align=center width="40%">
+			     <tr height="60px"><td id="KEY_PIN" class="KEY_PIN" width="45%" bgcolor="#bbbbbb" align="center" valign="Center" height="50"><b>PIN</b></td>
+			   </table>
+			   </div>
+		<footer data-role="footer" data-position="fixed">
+		<nav data-role="navbar">
+			<ul>
+				<li><a href="#tv" data-icon="home">TV</a></li>
+				<li><a href="#receiver" data-icon="grid">Receiver</a></li>
+				<li><a href="#Power" data-icon="info">Power</a></li>
+			</ul>
+		</nav>
+	    </footer>
+	</div>
+	
+	
+	
 	<div data-role="page" id="Guide">
 		<header data-role="header">
 		<h1>Guide</h1>
@@ -419,6 +484,13 @@ $("#guide_swipe").swiperight(function() {
 				<h1>Guide</h1>
 				
 				<p>Open Guide Menu</p>
+			</a>
+			</li>
+			<li>
+				<a href="#ANY">
+				<h1>ARCHIV / ANYTIME</h1>
+				
+				<p>Open Archiv / Anytime</p>
 			</a>
 			</li>
 			</ul>
